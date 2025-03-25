@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02BF639F2D933EA7004C40CE /* 38.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63852D933EA7004C40CE /* 38.jpg */; };
+		02BF63A02D933EA7004C40CE /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63682D933EA7004C40CE /* 9.jpg */; };
+		02BF63A12D933EA7004C40CE /* 50.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63912D933EA7004C40CE /* 50.jpg */; };
+		02BF63A22D933EA7004C40CE /* TextBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BF639D2D933EA7004C40CE /* TextBox.png */; };
+		02BF63A32D933EA7004C40CE /* 34.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63812D933EA7004C40CE /* 34.jpg */; };
+		02BF63A42D933EA7004C40CE /* 37.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63842D933EA7004C40CE /* 37.jpg */; };
+		02BF63A52D933EA7004C40CE /* 20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63732D933EA7004C40CE /* 20.jpg */; };
+		02BF63A62D933EA7004C40CE /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF636A2D933EA7004C40CE /* 11.jpg */; };
+		02BF63A72D933EA7004C40CE /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63982D933EA7004C40CE /* 1.jpg */; };
+		02BF63A82D933EA7004C40CE /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63662D933EA7004C40CE /* 7.jpg */; };
+		02BF63A92D933EA7004C40CE /* DecorImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63962D933EA7004C40CE /* DecorImage.png */; };
+		02BF63AA2D933EA7004C40CE /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63712D933EA7004C40CE /* 18.jpg */; };
+		02BF63AB2D933EA7004C40CE /* 35.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63822D933EA7004C40CE /* 35.jpg */; };
+		02BF63AC2D933EA7004C40CE /* 32.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF637F2D933EA7004C40CE /* 32.jpg */; };
+		02BF63AD2D933EA7004C40CE /* pokeball.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BF639B2D933EA7004C40CE /* pokeball.png */; };
+		02BF63AE2D933EA7004C40CE /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63622D933EA7004C40CE /* 3.jpg */; };
+		02BF63AF2D933EA7004C40CE /* 23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63762D933EA7004C40CE /* 23.jpg */; };
+		02BF63B02D933EA7004C40CE /* 45.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF638C2D933EA7004C40CE /* 45.jpg */; };
+		02BF63B12D933EA7004C40CE /* 48.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF638F2D933EA7004C40CE /* 48.jpg */; };
+		02BF63B22D933EA7004C40CE /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF636C2D933EA7004C40CE /* 13.jpg */; };
+		02BF63B32D933EA7004C40CE /* 29.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF637C2D933EA7004C40CE /* 29.jpeg */; };
+		02BF63B42D933EA7004C40CE /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63692D933EA7004C40CE /* 10.jpg */; };
+		02BF63B52D933EA7004C40CE /* 42.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63892D933EA7004C40CE /* 42.jpg */; };
+		02BF63B62D933EA7004C40CE /* 28.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF637B2D933EA7004C40CE /* 28.jpg */; };
+		02BF63B72D933EA7004C40CE /* 46.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF638D2D933EA7004C40CE /* 46.jpg */; };
+		02BF63B82D933EA7004C40CE /* 41.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63882D933EA7004C40CE /* 41.jpg */; };
+		02BF63B92D933EA7004C40CE /* 16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF636F2D933EA7004C40CE /* 16.jpg */; };
+		02BF63BA2D933EA7004C40CE /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63632D933EA7004C40CE /* 4.jpg */; };
+		02BF63BB2D933EA7004C40CE /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63752D933EA7004C40CE /* 22.jpg */; };
+		02BF63BC2D933EA7004C40CE /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63922D933EA7004C40CE /* Background.jpg */; };
+		02BF63BD2D933EA7004C40CE /* 26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63792D933EA7004C40CE /* 26.jpg */; };
+		02BF63BE2D933EA7004C40CE /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BF639A2D933EA7004C40CE /* Logo.png */; };
+		02BF63BF2D933EA7004C40CE /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63722D933EA7004C40CE /* 19.jpg */; };
+		02BF63C02D933EA7004C40CE /* 27.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF637A2D933EA7004C40CE /* 27.jpg */; };
+		02BF63C12D933EA7004C40CE /* 43.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF638A2D933EA7004C40CE /* 43.jpg */; };
+		02BF63C22D933EA7004C40CE /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF636B2D933EA7004C40CE /* 12.jpg */; };
+		02BF63C32D933EA7004C40CE /* 31.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF637E2D933EA7004C40CE /* 31.jpg */; };
+		02BF63C42D933EA7004C40CE /* 25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63782D933EA7004C40CE /* 25.jpg */; };
+		02BF63C52D933EA7004C40CE /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63642D933EA7004C40CE /* 5.jpg */; };
+		02BF63C62D933EA7004C40CE /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63672D933EA7004C40CE /* 8.jpg */; };
+		02BF63C72D933EA7004C40CE /* 49.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63902D933EA7004C40CE /* 49.jpg */; };
+		02BF63C82D933EA7004C40CE /* Background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63932D933EA7004C40CE /* Background2.jpg */; };
+		02BF63C92D933EA7004C40CE /* 24.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63772D933EA7004C40CE /* 24.jpg */; };
+		02BF63CA2D933EA7004C40CE /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63652D933EA7004C40CE /* 6.jpg */; };
+		02BF63CB2D933EA7004C40CE /* 21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63742D933EA7004C40CE /* 21.jpg */; };
+		02BF63CC2D933EA7004C40CE /* 40.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63872D933EA7004C40CE /* 40.jpg */; };
+		02BF63CD2D933EA7004C40CE /* 33.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63802D933EA7004C40CE /* 33.jpg */; };
+		02BF63CE2D933EA7004C40CE /* 36.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63832D933EA7004C40CE /* 36.jpg */; };
+		02BF63CF2D933EA7004C40CE /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63992D933EA7004C40CE /* 2.jpg */; };
+		02BF63D02D933EA7004C40CE /* Pokémon icons.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF639C2D933EA7004C40CE /* Pokémon icons.jpeg */; };
+		02BF63D12D933EA7004C40CE /* 30.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF637D2D933EA7004C40CE /* 30.jpg */; };
+		02BF63D22D933EA7004C40CE /* HPBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63972D933EA7004C40CE /* HPBar.png */; };
+		02BF63D32D933EA7004C40CE /* 15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF636E2D933EA7004C40CE /* 15.jpg */; };
+		02BF63D42D933EA7004C40CE /* Copia de DecorImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63952D933EA7004C40CE /* Copia de DecorImage.png */; };
+		02BF63D52D933EA7004C40CE /* 39.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63862D933EA7004C40CE /* 39.jpg */; };
+		02BF63D62D933EA7004C40CE /* BackgroundCreditos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63942D933EA7004C40CE /* BackgroundCreditos.jpeg */; };
+		02BF63D72D933EA7004C40CE /* 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF636D2D933EA7004C40CE /* 14.jpg */; };
+		02BF63D82D933EA7004C40CE /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63702D933EA7004C40CE /* 17.jpg */; };
+		02BF63D92D933EA7004C40CE /* 44.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF638B2D933EA7004C40CE /* 44.jpg */; };
+		02BF63DA2D933EA7004C40CE /* 47.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF638E2D933EA7004C40CE /* 47.jpg */; };
+		02BF63DC2D934962004C40CE /* pokeball_abierta.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63DB2D934962004C40CE /* pokeball_abierta.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02BF632F2D9308CF004C40CE /* TriviaPokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaPokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BF63622D933EA7004C40CE /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		02BF63632D933EA7004C40CE /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		02BF63642D933EA7004C40CE /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		02BF63652D933EA7004C40CE /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		02BF63662D933EA7004C40CE /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		02BF63672D933EA7004C40CE /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		02BF63682D933EA7004C40CE /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
+		02BF63692D933EA7004C40CE /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		02BF636A2D933EA7004C40CE /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
+		02BF636B2D933EA7004C40CE /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
+		02BF636C2D933EA7004C40CE /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
+		02BF636D2D933EA7004C40CE /* 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.jpg; sourceTree = "<group>"; };
+		02BF636E2D933EA7004C40CE /* 15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.jpg; sourceTree = "<group>"; };
+		02BF636F2D933EA7004C40CE /* 16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16.jpg; sourceTree = "<group>"; };
+		02BF63702D933EA7004C40CE /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.jpg; sourceTree = "<group>"; };
+		02BF63712D933EA7004C40CE /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
+		02BF63722D933EA7004C40CE /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
+		02BF63732D933EA7004C40CE /* 20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20.jpg; sourceTree = "<group>"; };
+		02BF63742D933EA7004C40CE /* 21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 21.jpg; sourceTree = "<group>"; };
+		02BF63752D933EA7004C40CE /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
+		02BF63762D933EA7004C40CE /* 23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 23.jpg; sourceTree = "<group>"; };
+		02BF63772D933EA7004C40CE /* 24.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 24.jpg; sourceTree = "<group>"; };
+		02BF63782D933EA7004C40CE /* 25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 25.jpg; sourceTree = "<group>"; };
+		02BF63792D933EA7004C40CE /* 26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 26.jpg; sourceTree = "<group>"; };
+		02BF637A2D933EA7004C40CE /* 27.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 27.jpg; sourceTree = "<group>"; };
+		02BF637B2D933EA7004C40CE /* 28.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 28.jpg; sourceTree = "<group>"; };
+		02BF637C2D933EA7004C40CE /* 29.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 29.jpeg; sourceTree = "<group>"; };
+		02BF637D2D933EA7004C40CE /* 30.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 30.jpg; sourceTree = "<group>"; };
+		02BF637E2D933EA7004C40CE /* 31.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 31.jpg; sourceTree = "<group>"; };
+		02BF637F2D933EA7004C40CE /* 32.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 32.jpg; sourceTree = "<group>"; };
+		02BF63802D933EA7004C40CE /* 33.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 33.jpg; sourceTree = "<group>"; };
+		02BF63812D933EA7004C40CE /* 34.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 34.jpg; sourceTree = "<group>"; };
+		02BF63822D933EA7004C40CE /* 35.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 35.jpg; sourceTree = "<group>"; };
+		02BF63832D933EA7004C40CE /* 36.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 36.jpg; sourceTree = "<group>"; };
+		02BF63842D933EA7004C40CE /* 37.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 37.jpg; sourceTree = "<group>"; };
+		02BF63852D933EA7004C40CE /* 38.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 38.jpg; sourceTree = "<group>"; };
+		02BF63862D933EA7004C40CE /* 39.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 39.jpg; sourceTree = "<group>"; };
+		02BF63872D933EA7004C40CE /* 40.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 40.jpg; sourceTree = "<group>"; };
+		02BF63882D933EA7004C40CE /* 41.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 41.jpg; sourceTree = "<group>"; };
+		02BF63892D933EA7004C40CE /* 42.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 42.jpg; sourceTree = "<group>"; };
+		02BF638A2D933EA7004C40CE /* 43.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 43.jpg; sourceTree = "<group>"; };
+		02BF638B2D933EA7004C40CE /* 44.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 44.jpg; sourceTree = "<group>"; };
+		02BF638C2D933EA7004C40CE /* 45.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 45.jpg; sourceTree = "<group>"; };
+		02BF638D2D933EA7004C40CE /* 46.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 46.jpg; sourceTree = "<group>"; };
+		02BF638E2D933EA7004C40CE /* 47.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 47.jpg; sourceTree = "<group>"; };
+		02BF638F2D933EA7004C40CE /* 48.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 48.jpg; sourceTree = "<group>"; };
+		02BF63902D933EA7004C40CE /* 49.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 49.jpg; sourceTree = "<group>"; };
+		02BF63912D933EA7004C40CE /* 50.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 50.jpg; sourceTree = "<group>"; };
+		02BF63922D933EA7004C40CE /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpg; sourceTree = "<group>"; };
+		02BF63932D933EA7004C40CE /* Background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background2.jpg; sourceTree = "<group>"; };
+		02BF63942D933EA7004C40CE /* BackgroundCreditos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BackgroundCreditos.jpeg; sourceTree = "<group>"; };
+		02BF63952D933EA7004C40CE /* Copia de DecorImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Copia de DecorImage.png"; sourceTree = "<group>"; };
+		02BF63962D933EA7004C40CE /* DecorImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DecorImage.png; sourceTree = "<group>"; };
+		02BF63972D933EA7004C40CE /* HPBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HPBar.png; sourceTree = "<group>"; };
+		02BF63982D933EA7004C40CE /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		02BF63992D933EA7004C40CE /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		02BF639A2D933EA7004C40CE /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		02BF639B2D933EA7004C40CE /* pokeball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pokeball.png; sourceTree = "<group>"; };
+		02BF639C2D933EA7004C40CE /* Pokémon icons.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Pokémon icons.jpeg"; sourceTree = "<group>"; };
+		02BF639D2D933EA7004C40CE /* TextBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextBox.png; sourceTree = "<group>"; };
+		02BF63DB2D934962004C40CE /* pokeball_abierta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pokeball_abierta.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		02BF63412D9308D0004C40CE /* Exceptions for "TriviaPokemon" folder in "TriviaPokemon" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 02BF632E2D9308CF004C40CE /* TriviaPokemon */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		02BF63312D9308CF004C40CE /* TriviaPokemon */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				02BF63412D9308D0004C40CE /* Exceptions for "TriviaPokemon" folder in "TriviaPokemon" target */,
+			);
+			path = TriviaPokemon;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02BF632C2D9308CF004C40CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02BF63262D9308CF004C40CE = {
+			isa = PBXGroup;
+			children = (
+				02BF639E2D933EA7004C40CE /* TriviaFiles 2 */,
+				02BF63312D9308CF004C40CE /* TriviaPokemon */,
+				02BF63302D9308CF004C40CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		02BF63302D9308CF004C40CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02BF632F2D9308CF004C40CE /* TriviaPokemon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02BF639E2D933EA7004C40CE /* TriviaFiles 2 */ = {
+			isa = PBXGroup;
+			children = (
+				02BF63DB2D934962004C40CE /* pokeball_abierta.png */,
+				02BF63622D933EA7004C40CE /* 3.jpg */,
+				02BF63632D933EA7004C40CE /* 4.jpg */,
+				02BF63642D933EA7004C40CE /* 5.jpg */,
+				02BF63652D933EA7004C40CE /* 6.jpg */,
+				02BF63662D933EA7004C40CE /* 7.jpg */,
+				02BF63672D933EA7004C40CE /* 8.jpg */,
+				02BF63682D933EA7004C40CE /* 9.jpg */,
+				02BF63692D933EA7004C40CE /* 10.jpg */,
+				02BF636A2D933EA7004C40CE /* 11.jpg */,
+				02BF636B2D933EA7004C40CE /* 12.jpg */,
+				02BF636C2D933EA7004C40CE /* 13.jpg */,
+				02BF636D2D933EA7004C40CE /* 14.jpg */,
+				02BF636E2D933EA7004C40CE /* 15.jpg */,
+				02BF636F2D933EA7004C40CE /* 16.jpg */,
+				02BF63702D933EA7004C40CE /* 17.jpg */,
+				02BF63712D933EA7004C40CE /* 18.jpg */,
+				02BF63722D933EA7004C40CE /* 19.jpg */,
+				02BF63732D933EA7004C40CE /* 20.jpg */,
+				02BF63742D933EA7004C40CE /* 21.jpg */,
+				02BF63752D933EA7004C40CE /* 22.jpg */,
+				02BF63762D933EA7004C40CE /* 23.jpg */,
+				02BF63772D933EA7004C40CE /* 24.jpg */,
+				02BF63782D933EA7004C40CE /* 25.jpg */,
+				02BF63792D933EA7004C40CE /* 26.jpg */,
+				02BF637A2D933EA7004C40CE /* 27.jpg */,
+				02BF637B2D933EA7004C40CE /* 28.jpg */,
+				02BF637C2D933EA7004C40CE /* 29.jpeg */,
+				02BF637D2D933EA7004C40CE /* 30.jpg */,
+				02BF637E2D933EA7004C40CE /* 31.jpg */,
+				02BF637F2D933EA7004C40CE /* 32.jpg */,
+				02BF63802D933EA7004C40CE /* 33.jpg */,
+				02BF63812D933EA7004C40CE /* 34.jpg */,
+				02BF63822D933EA7004C40CE /* 35.jpg */,
+				02BF63832D933EA7004C40CE /* 36.jpg */,
+				02BF63842D933EA7004C40CE /* 37.jpg */,
+				02BF63852D933EA7004C40CE /* 38.jpg */,
+				02BF63862D933EA7004C40CE /* 39.jpg */,
+				02BF63872D933EA7004C40CE /* 40.jpg */,
+				02BF63882D933EA7004C40CE /* 41.jpg */,
+				02BF63892D933EA7004C40CE /* 42.jpg */,
+				02BF638A2D933EA7004C40CE /* 43.jpg */,
+				02BF638B2D933EA7004C40CE /* 44.jpg */,
+				02BF638C2D933EA7004C40CE /* 45.jpg */,
+				02BF638D2D933EA7004C40CE /* 46.jpg */,
+				02BF638E2D933EA7004C40CE /* 47.jpg */,
+				02BF638F2D933EA7004C40CE /* 48.jpg */,
+				02BF63902D933EA7004C40CE /* 49.jpg */,
+				02BF63912D933EA7004C40CE /* 50.jpg */,
+				02BF63922D933EA7004C40CE /* Background.jpg */,
+				02BF63932D933EA7004C40CE /* Background2.jpg */,
+				02BF63942D933EA7004C40CE /* BackgroundCreditos.jpeg */,
+				02BF63952D933EA7004C40CE /* Copia de DecorImage.png */,
+				02BF63962D933EA7004C40CE /* DecorImage.png */,
+				02BF63972D933EA7004C40CE /* HPBar.png */,
+				02BF63982D933EA7004C40CE /* 1.jpg */,
+				02BF63992D933EA7004C40CE /* 2.jpg */,
+				02BF639A2D933EA7004C40CE /* Logo.png */,
+				02BF639B2D933EA7004C40CE /* pokeball.png */,
+				02BF639C2D933EA7004C40CE /* Pokémon icons.jpeg */,
+				02BF639D2D933EA7004C40CE /* TextBox.png */,
+			);
+			path = "TriviaFiles 2";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02BF632E2D9308CF004C40CE /* TriviaPokemon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02BF63422D9308D0004C40CE /* Build configuration list for PBXNativeTarget "TriviaPokemon" */;
+			buildPhases = (
+				02BF632B2D9308CF004C40CE /* Sources */,
+				02BF632C2D9308CF004C40CE /* Frameworks */,
+				02BF632D2D9308CF004C40CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				02BF63312D9308CF004C40CE /* TriviaPokemon */,
+			);
+			name = TriviaPokemon;
+			packageProductDependencies = (
+			);
+			productName = TriviaPokemon;
+			productReference = 02BF632F2D9308CF004C40CE /* TriviaPokemon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02BF63272D9308CF004C40CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					02BF632E2D9308CF004C40CE = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = 02BF632A2D9308CF004C40CE /* Build configuration list for PBXProject "TriviaPokemon" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02BF63262D9308CF004C40CE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 02BF63302D9308CF004C40CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02BF632E2D9308CF004C40CE /* TriviaPokemon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02BF632D2D9308CF004C40CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BF639F2D933EA7004C40CE /* 38.jpg in Resources */,
+				02BF63A02D933EA7004C40CE /* 9.jpg in Resources */,
+				02BF63A12D933EA7004C40CE /* 50.jpg in Resources */,
+				02BF63A22D933EA7004C40CE /* TextBox.png in Resources */,
+				02BF63A32D933EA7004C40CE /* 34.jpg in Resources */,
+				02BF63DC2D934962004C40CE /* pokeball_abierta.png in Resources */,
+				02BF63A42D933EA7004C40CE /* 37.jpg in Resources */,
+				02BF63A52D933EA7004C40CE /* 20.jpg in Resources */,
+				02BF63A62D933EA7004C40CE /* 11.jpg in Resources */,
+				02BF63A72D933EA7004C40CE /* 1.jpg in Resources */,
+				02BF63A82D933EA7004C40CE /* 7.jpg in Resources */,
+				02BF63A92D933EA7004C40CE /* DecorImage.png in Resources */,
+				02BF63AA2D933EA7004C40CE /* 18.jpg in Resources */,
+				02BF63AB2D933EA7004C40CE /* 35.jpg in Resources */,
+				02BF63AC2D933EA7004C40CE /* 32.jpg in Resources */,
+				02BF63AD2D933EA7004C40CE /* pokeball.png in Resources */,
+				02BF63AE2D933EA7004C40CE /* 3.jpg in Resources */,
+				02BF63AF2D933EA7004C40CE /* 23.jpg in Resources */,
+				02BF63B02D933EA7004C40CE /* 45.jpg in Resources */,
+				02BF63B12D933EA7004C40CE /* 48.jpg in Resources */,
+				02BF63B22D933EA7004C40CE /* 13.jpg in Resources */,
+				02BF63B32D933EA7004C40CE /* 29.jpeg in Resources */,
+				02BF63B42D933EA7004C40CE /* 10.jpg in Resources */,
+				02BF63B52D933EA7004C40CE /* 42.jpg in Resources */,
+				02BF63B62D933EA7004C40CE /* 28.jpg in Resources */,
+				02BF63B72D933EA7004C40CE /* 46.jpg in Resources */,
+				02BF63B82D933EA7004C40CE /* 41.jpg in Resources */,
+				02BF63B92D933EA7004C40CE /* 16.jpg in Resources */,
+				02BF63BA2D933EA7004C40CE /* 4.jpg in Resources */,
+				02BF63BB2D933EA7004C40CE /* 22.jpg in Resources */,
+				02BF63BC2D933EA7004C40CE /* Background.jpg in Resources */,
+				02BF63BD2D933EA7004C40CE /* 26.jpg in Resources */,
+				02BF63BE2D933EA7004C40CE /* Logo.png in Resources */,
+				02BF63BF2D933EA7004C40CE /* 19.jpg in Resources */,
+				02BF63C02D933EA7004C40CE /* 27.jpg in Resources */,
+				02BF63C12D933EA7004C40CE /* 43.jpg in Resources */,
+				02BF63C22D933EA7004C40CE /* 12.jpg in Resources */,
+				02BF63C32D933EA7004C40CE /* 31.jpg in Resources */,
+				02BF63C42D933EA7004C40CE /* 25.jpg in Resources */,
+				02BF63C52D933EA7004C40CE /* 5.jpg in Resources */,
+				02BF63C62D933EA7004C40CE /* 8.jpg in Resources */,
+				02BF63C72D933EA7004C40CE /* 49.jpg in Resources */,
+				02BF63C82D933EA7004C40CE /* Background2.jpg in Resources */,
+				02BF63C92D933EA7004C40CE /* 24.jpg in Resources */,
+				02BF63CA2D933EA7004C40CE /* 6.jpg in Resources */,
+				02BF63CB2D933EA7004C40CE /* 21.jpg in Resources */,
+				02BF63CC2D933EA7004C40CE /* 40.jpg in Resources */,
+				02BF63CD2D933EA7004C40CE /* 33.jpg in Resources */,
+				02BF63CE2D933EA7004C40CE /* 36.jpg in Resources */,
+				02BF63CF2D933EA7004C40CE /* 2.jpg in Resources */,
+				02BF63D02D933EA7004C40CE /* Pokémon icons.jpeg in Resources */,
+				02BF63D12D933EA7004C40CE /* 30.jpg in Resources */,
+				02BF63D22D933EA7004C40CE /* HPBar.png in Resources */,
+				02BF63D32D933EA7004C40CE /* 15.jpg in Resources */,
+				02BF63D42D933EA7004C40CE /* Copia de DecorImage.png in Resources */,
+				02BF63D52D933EA7004C40CE /* 39.jpg in Resources */,
+				02BF63D62D933EA7004C40CE /* BackgroundCreditos.jpeg in Resources */,
+				02BF63D72D933EA7004C40CE /* 14.jpg in Resources */,
+				02BF63D82D933EA7004C40CE /* 17.jpg in Resources */,
+				02BF63D92D933EA7004C40CE /* 44.jpg in Resources */,
+				02BF63DA2D933EA7004C40CE /* 47.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02BF632B2D9308CF004C40CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		02BF63432D9308D0004C40CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TriviaPokemon/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UTT.TriviaPokemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		02BF63442D9308D0004C40CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TriviaPokemon/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UTT.TriviaPokemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		02BF63452D9308D0004C40CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		02BF63462D9308D0004C40CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02BF632A2D9308CF004C40CE /* Build configuration list for PBXProject "TriviaPokemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BF63452D9308D0004C40CE /* Debug */,
+				02BF63462D9308D0004C40CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02BF63422D9308D0004C40CE /* Build configuration list for PBXNativeTarget "TriviaPokemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BF63432D9308D0004C40CE /* Debug */,
+				02BF63442D9308D0004C40CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02BF63272D9308CF004C40CE /* Project object */;
+}
