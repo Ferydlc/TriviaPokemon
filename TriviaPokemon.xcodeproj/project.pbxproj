@@ -68,6 +68,13 @@
 		02BF63D92D933EA7004C40CE /* 44.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF638B2D933EA7004C40CE /* 44.jpg */; };
 		02BF63DA2D933EA7004C40CE /* 47.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF638E2D933EA7004C40CE /* 47.jpg */; };
 		02BF63DC2D934962004C40CE /* pokeball_abierta.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63DB2D934962004C40CE /* pokeball_abierta.png */; };
+		048DAAFC2D935B82004D6DAF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048DAAFB2D935B82004D6DAF /* AVFoundation.framework */; };
+		048DAAFE2D935B8C004D6DAF /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048DAAFD2D935B8C004D6DAF /* AVKit.framework */; };
+		048DAB082D9361FD004D6DAF /* Caramelldansen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048DAB072D9361FD004D6DAF /* Caramelldansen.mp3 */; };
+		048DAB0F2D936669004D6DAF /* sonido.png in Resources */ = {isa = PBXBuildFile; fileRef = 048DAB0E2D936669004D6DAF /* sonido.png */; };
+		048DAB102D936669004D6DAF /* nosonido.png in Resources */ = {isa = PBXBuildFile; fileRef = 048DAB0D2D936669004D6DAF /* nosonido.png */; };
+		048DAB132D936B6E004D6DAF /* exito.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048DAB112D936B6E004D6DAF /* exito.mp3 */; };
+		048DAB142D936B6E004D6DAF /* fracaso.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048DAB122D936B6E004D6DAF /* fracaso.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +140,13 @@
 		02BF639C2D933EA7004C40CE /* Pokémon icons.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Pokémon icons.jpeg"; sourceTree = "<group>"; };
 		02BF639D2D933EA7004C40CE /* TextBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextBox.png; sourceTree = "<group>"; };
 		02BF63DB2D934962004C40CE /* pokeball_abierta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pokeball_abierta.png; sourceTree = "<group>"; };
+		048DAAFB2D935B82004D6DAF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		048DAAFD2D935B8C004D6DAF /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		048DAB072D9361FD004D6DAF /* Caramelldansen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Caramelldansen.mp3; sourceTree = "<group>"; };
+		048DAB0D2D936669004D6DAF /* nosonido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nosonido.png; sourceTree = "<group>"; };
+		048DAB0E2D936669004D6DAF /* sonido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sonido.png; sourceTree = "<group>"; };
+		048DAB112D936B6E004D6DAF /* exito.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = exito.mp3; sourceTree = "<group>"; };
+		048DAB122D936B6E004D6DAF /* fracaso.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fracaso.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -161,6 +175,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048DAAFE2D935B8C004D6DAF /* AVKit.framework in Frameworks */,
+				048DAAFC2D935B82004D6DAF /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +188,7 @@
 			children = (
 				02BF639E2D933EA7004C40CE /* TriviaFiles 2 */,
 				02BF63312D9308CF004C40CE /* TriviaPokemon */,
+				048DAAFA2D935B82004D6DAF /* Frameworks */,
 				02BF63302D9308CF004C40CE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -187,6 +204,11 @@
 		02BF639E2D933EA7004C40CE /* TriviaFiles 2 */ = {
 			isa = PBXGroup;
 			children = (
+				048DAB112D936B6E004D6DAF /* exito.mp3 */,
+				048DAB122D936B6E004D6DAF /* fracaso.mp3 */,
+				048DAB0D2D936669004D6DAF /* nosonido.png */,
+				048DAB0E2D936669004D6DAF /* sonido.png */,
+				048DAB072D9361FD004D6DAF /* Caramelldansen.mp3 */,
 				02BF63DB2D934962004C40CE /* pokeball_abierta.png */,
 				02BF63622D933EA7004C40CE /* 3.jpg */,
 				02BF63632D933EA7004C40CE /* 4.jpg */,
@@ -250,6 +272,15 @@
 				02BF639D2D933EA7004C40CE /* TextBox.png */,
 			);
 			path = "TriviaFiles 2";
+			sourceTree = "<group>";
+		};
+		048DAAFA2D935B82004D6DAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				048DAAFD2D935B8C004D6DAF /* AVKit.framework */,
+				048DAAFB2D935B82004D6DAF /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +359,8 @@
 				02BF63A72D933EA7004C40CE /* 1.jpg in Resources */,
 				02BF63A82D933EA7004C40CE /* 7.jpg in Resources */,
 				02BF63A92D933EA7004C40CE /* DecorImage.png in Resources */,
+				048DAB0F2D936669004D6DAF /* sonido.png in Resources */,
+				048DAB102D936669004D6DAF /* nosonido.png in Resources */,
 				02BF63AA2D933EA7004C40CE /* 18.jpg in Resources */,
 				02BF63AB2D933EA7004C40CE /* 35.jpg in Resources */,
 				02BF63AC2D933EA7004C40CE /* 32.jpg in Resources */,
@@ -335,6 +368,8 @@
 				02BF63AE2D933EA7004C40CE /* 3.jpg in Resources */,
 				02BF63AF2D933EA7004C40CE /* 23.jpg in Resources */,
 				02BF63B02D933EA7004C40CE /* 45.jpg in Resources */,
+				048DAB132D936B6E004D6DAF /* exito.mp3 in Resources */,
+				048DAB142D936B6E004D6DAF /* fracaso.mp3 in Resources */,
 				02BF63B12D933EA7004C40CE /* 48.jpg in Resources */,
 				02BF63B22D933EA7004C40CE /* 13.jpg in Resources */,
 				02BF63B32D933EA7004C40CE /* 29.jpeg in Resources */,
@@ -361,6 +396,7 @@
 				02BF63C82D933EA7004C40CE /* Background2.jpg in Resources */,
 				02BF63C92D933EA7004C40CE /* 24.jpg in Resources */,
 				02BF63CA2D933EA7004C40CE /* 6.jpg in Resources */,
+				048DAB082D9361FD004D6DAF /* Caramelldansen.mp3 in Resources */,
 				02BF63CB2D933EA7004C40CE /* 21.jpg in Resources */,
 				02BF63CC2D933EA7004C40CE /* 40.jpg in Resources */,
 				02BF63CD2D933EA7004C40CE /* 33.jpg in Resources */,

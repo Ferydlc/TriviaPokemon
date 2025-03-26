@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class JuegoViewController: UIViewController {
 
@@ -194,21 +195,22 @@ class JuegoViewController: UIViewController {
     var timerTotal: Timer?
     var timerPregunta: Timer?
     var puntaje = 0
+    var juegoPausado = false // Nueva propiedad para controlar el estado del juego
+    
+    var audioPlayer: AVAudioPlayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         iniciarTimerTotal()
         mostrarPregunta()
         iniciarTimerPregunta()
-        lblPuntaje.text = "\(puntaje)" // Asegurar que empiece en 0
+        lblPuntaje.text = "\(puntaje)"
     }
     
-    override func viewWillAppear(_ animated: Bool)
-    {
-        for boton in btnRespuestas
-       {
-          boton.layer.cornerRadius = 20
-       }
+    override func viewWillAppear(_ animated: Bool) {
+        for boton in btnRespuestas {
+            boton.layer.cornerRadius = 20
+        }
     }
 
     func iniciarTimerTotal() {
@@ -235,32 +237,87 @@ class JuegoViewController: UIViewController {
     }
 
     func tiempoAgotado() {
-        for boton in btnRespuestas {
-            boton.isEnabled = false
+            guard !juegoPausado else { return }
+            
+            for boton in btnRespuestas {
+                boton.isEnabled = false
+            }
+            
+            juegoPausado = true
+            timerPregunta?.invalidate()
+            
+            let mensaje = "Tardaste demasiado en responder. Te quedan \(max(0, vidas-1)) intentos."
+            
+            let alerta = UIAlertController(title: "¡Tiempo agotado!", message: mensaje, preferredStyle: .alert)
+            alerta.addAction(UIAlertAction(title: "Entendido", style: .default) { _ in
+                self.juegoPausado = false
+                self.restarVida()
+                if self.vidas > 0 {
+                    self.avanzarPregunta()
+                }
+            })
+            
+            present(alerta, animated: true)
+    }
+
+    func reproducirSonido(nombreArchivo: String) {
+        guard let url = Bundle.main.url(forResource: nombreArchivo, withExtension: "mp3") else {
+            print("Error: No se encontró el archivo de sonido \(nombreArchivo)")
+            return
         }
-        restarVida()
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.prepareToPlay()
+            audioPlayer?.play()
+        } catch {
+            print("Error al reproducir el sonido: \(error.localizedDescription)")
+        }
     }
 
     @IBAction func seleccionarRespuesta(_ sender: UIButton) {
-        if vidas <= 0 { return }
+            if vidas <= 0 || juegoPausado { return }
 
-        let respuestaSeleccionada = sender.currentTitle ?? ""
-        timerPregunta?.invalidate()
+            let respuestaSeleccionada = sender.currentTitle ?? ""
+            timerPregunta?.invalidate()
+            juegoPausado = true
 
-        for boton in btnRespuestas {
-            boton.isEnabled = false
-        }
+            for boton in btnRespuestas {
+                boton.isEnabled = false
+            }
 
-        if respuestaSeleccionada == respuestasCorrectas[indicePreguntaActual] {
-            // Calcular puntaje: 75 + segundos restantes
-            puntaje += 75 + tiempoPregunta
-            lblPuntaje.text = "\(puntaje)" // Actualizar label
-            sender.backgroundColor = .green
-            avanzarPregunta()
-        } else {
-            sender.backgroundColor = .red
-            restarVida()
-        }
+            if respuestaSeleccionada == respuestasCorrectas[indicePreguntaActual] {
+                reproducirSonido(nombreArchivo: "exito")
+                puntaje += 85 + tiempoPregunta
+                lblPuntaje.text = "\(puntaje)"
+                sender.backgroundColor = .green
+                
+                let mensaje = "¡Respuesta correcta! +\(85 + tiempoPregunta) puntos"
+                
+                let alerta = UIAlertController(title: "¡Correcto!", message: mensaje, preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "Siguiente", style: .default) { _ in
+                    self.juegoPausado = false
+                    self.avanzarPregunta()
+                })
+                
+                present(alerta, animated: true)
+            } else {
+                reproducirSonido(nombreArchivo: "fracaso")
+                sender.backgroundColor = .red
+                
+                let mensaje = "Respuesta incorrecta. Te quedan \(max(0, vidas-1)) intentos."
+                
+                let alerta = UIAlertController(title: "Incorrecto", message: mensaje, preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "Entendido", style: .default) { _ in
+                    self.juegoPausado = false
+                    self.restarVida()
+                    if self.vidas > 0 {
+                        self.avanzarPregunta()
+                    }
+                })
+                
+                present(alerta, animated: true)
+            }
     }
 
     func mostrarPregunta() {
@@ -290,50 +347,49 @@ class JuegoViewController: UIViewController {
     }
 
     func restarVida() {
-        vidas -= 1
-        actualizarVidasUI()
+            vidas = max(0, vidas - 1) // Asegura que las vidas no sean negativas
+            actualizarVidasUI()
 
-        if vidas <= 0 {
-            mostrarFinDelJuego()
-        } else {
-            let alerta = UIAlertController(title: "Incorrecto", message: "Te quedan \(vidas) vidas.", preferredStyle: .alert)
-            alerta.addAction(UIAlertAction(title: "Siguiente", style: .default) { _ in
-                self.avanzarPregunta()
-            })
-            present(alerta, animated: true)
-        }
+            if vidas <= 0 {
+                mostrarFinDelJuego()
+            }
     }
 
     func actualizarVidasUI() {
         let vidasArray = [imgVida1, imgVida2, imgVida3]
-        let vidasPerdidas = 3 - vidas // Calcula cuántas vidas se han perdido
         
         for (indice, vida) in vidasArray.enumerated() {
-            // Cambia a pokeball_abierta SOLO para las vidas perdidas
-            vida?.image = (indice < vidasPerdidas) ?
-                UIImage(named: "pokeball") :
-                UIImage(named: "pokeball_cerrada")
+            vida?.image = (indice < vidas) ?
+                UIImage(named: "pokeball_cerrada") :
+                UIImage(named: "pokeball")
         }
     }
 
     func mostrarFinDelJuego() {
         timerTotal?.invalidate()
         timerPregunta?.invalidate()
-        let alerta = UIAlertController(title: "Juego Terminado", message: "¡Has perdido todas tus vidas!", preferredStyle: .alert)
+        
+        let alerta = UIAlertController(
+            title: "¡Juego Terminado!",
+            message: "Ya agotaste todos tus intentos. Más suerte para la próxima.\nPuntaje final: \(puntaje)",
+            preferredStyle: .alert
+        )
+        
         alerta.addAction(UIAlertAction(title: "Reiniciar", style: .default) { _ in
             self.reiniciarJuego()
         })
-        alerta.addAction(UIAlertAction(title: "Volver a pantalla de inicio", style: .default) { _ in
+        alerta.addAction(UIAlertAction(title: "Volver al inicio", style: .default) { _ in
             self.navegarAPantallaDeInicio()
         })
+        
         present(alerta, animated: true)
     }
 
     func reiniciarJuego() {
         indicePreguntaActual = 0
         vidas = 3
-        puntaje = 0 // Reiniciar puntaje
-        lblPuntaje.text = "\(puntaje)" // Actualizar label
+        puntaje = 0
+        lblPuntaje.text = "\(puntaje)"
         tiempoTotal = 0
         timerTotal?.invalidate()
         timerPregunta?.invalidate()
@@ -345,10 +401,22 @@ class JuegoViewController: UIViewController {
     func mostrarPuntajeFinal() {
         timerTotal?.invalidate()
         timerPregunta?.invalidate()
-        let alerta = UIAlertController(title: "Trivia Terminada", message: "Has completado todas las preguntas.", preferredStyle: .alert)
+        
+        // Convertir tiempoTotal a formato minutos:segundos
+        let minutos = tiempoTotal / 60
+        let segundos = tiempoTotal % 60
+        let tiempoFormateado = String(format: "%d:%02d", minutos, segundos)
+        
+        let alerta = UIAlertController(
+            title: "¡Felicidades!",
+            message: "¡Has completado todas las preguntas de la trivia!\nPuntaje final: \(puntaje)\nTiempo total: \(tiempoFormateado)",
+            preferredStyle: .alert
+        )
+        
         alerta.addAction(UIAlertAction(title: "Regresar al inicio", style: .default) { _ in
             self.navegarAPantallaDeInicio()
         })
+        
         present(alerta, animated: true)
     }
 
@@ -358,5 +426,17 @@ class JuegoViewController: UIViewController {
         } else {
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    func mostrarAlertaConMensaje(titulo: String, mensaje: String, esError: Bool) {
+        let alerta = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
+        
+        if esError {
+            alerta.addAction(UIAlertAction(title: "Entendido", style: .default))
+        } else {
+            alerta.addAction(UIAlertAction(title: "Siguiente", style: .default))
+        }
+        
+        present(alerta, animated: true)
     }
 }
