@@ -8,7 +8,7 @@
 import UIKit
 
 class JuegoViewController: UIViewController {
-
+    
     @IBOutlet weak var imgPregunta: UIImageView!
     @IBOutlet weak var lblPregunta: UILabel!
     @IBOutlet weak var lblTiempo: UILabel!
@@ -82,7 +82,7 @@ class JuegoViewController: UIViewController {
         "¿Cuál de estos Pokémon tiene una evolución regional en Hisui?",
         "¿Cuál de estos Pokémon puede evolucionar a Froslass?"
     ]
-
+    
     // Array de respuestas
     let opciones = [
         ["a) Bulbasaur", "b) Charmander", "c) Pikachu", "d) Squirtle"],
@@ -136,7 +136,7 @@ class JuegoViewController: UIViewController {
         ["a) Qwilfish", "b) Voltorb", "c) Tentacool", "d) Joltik"],
         ["a) Snorunt", "b) Glalie", "c) Spheal", "d) Sealeo"]
     ]
-
+    
     let respuestasCorrectas = [
         "c) Pikachu",  // Pregunta 1
         "d) Fuego",  // Pregunta 2
@@ -192,15 +192,15 @@ class JuegoViewController: UIViewController {
     
     var indicePreguntaActual = 0
     var vidas = 3
-    var tiempoTotal = 0
+//    var tiempoTotal = 0
     var tiempoPregunta = 15
-    var timerTotal: Timer?
+//    var timerTotal: Timer?
     var timerPregunta: Timer?
     var puntaje = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        iniciarTimerTotal()
+//        iniciarTimerTotal()
         mostrarPregunta()
         iniciarTimerPregunta()
         lblPuntaje.text = "\(puntaje)" // Asegurar que empiece en 0
@@ -209,23 +209,23 @@ class JuegoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool)
     {
         for boton in btnRespuestas
-       {
-          boton.layer.cornerRadius = 10
-       }
+        {
+            boton.layer.cornerRadius = 10
+        }
         
         ViewJuego.layer.cornerRadius = 20
         imgPregunta.layer.cornerRadius = 20
         
         btnTerminarPartida.layer.cornerRadius = 10
     }
-
-    func iniciarTimerTotal() {
-        tiempoTotal = 0
-        timerTotal = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            self.tiempoTotal += 1
-        }
-    }
-
+    
+//    func iniciarTimerTotal() {
+//        tiempoTotal = 0
+//        timerTotal = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+//            self.tiempoTotal += 1
+//        }
+//    }
+    
     func iniciarTimerPregunta() {
         tiempoPregunta = 15
         lblTiempo.text = "15"
@@ -241,28 +241,27 @@ class JuegoViewController: UIViewController {
             }
         }
     }
-
+    
     func tiempoAgotado() {
         for boton in btnRespuestas {
             boton.isEnabled = false
         }
         restarVida()
     }
-
+    
     @IBAction func seleccionarRespuesta(_ sender: UIButton) {
         if vidas <= 0 { return }
-
+        
         let respuestaSeleccionada = sender.currentTitle ?? ""
         timerPregunta?.invalidate()
-
+        
         for boton in btnRespuestas {
             boton.isEnabled = false
         }
-
+        
         if respuestaSeleccionada == respuestasCorrectas[indicePreguntaActual] {
-            // Calcular puntaje: 75 + segundos restantes
             puntaje += 75 + tiempoPregunta
-            lblPuntaje.text = "\(puntaje)" // Actualizar label
+            lblPuntaje.text = "\(puntaje)"
             sender.backgroundColor = .green
             avanzarPregunta()
         } else {
@@ -270,13 +269,13 @@ class JuegoViewController: UIViewController {
             restarVida()
         }
     }
-
+    
     func mostrarPregunta() {
         guard indicePreguntaActual < preguntas.count else { return }
         
         imgPregunta.image = UIImage(named: imagenes[indicePreguntaActual])
         lblPregunta.text = preguntas[indicePreguntaActual]
-
+        
         for (indice, boton) in btnRespuestas.enumerated() {
             boton.setTitle(opciones[indicePreguntaActual][indice], for: .normal)
             boton.isEnabled = true
@@ -285,7 +284,7 @@ class JuegoViewController: UIViewController {
         
         iniciarTimerPregunta()
     }
-
+    
     func avanzarPregunta() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.indicePreguntaActual += 1
@@ -296,11 +295,11 @@ class JuegoViewController: UIViewController {
             }
         }
     }
-
+    
     func restarVida() {
         vidas -= 1
         actualizarVidasUI()
-
+        
         if vidas <= 0 {
             mostrarFinDelJuego()
         } else {
@@ -311,7 +310,7 @@ class JuegoViewController: UIViewController {
             present(alerta, animated: true)
         }
     }
-
+    
     func actualizarVidasUI() {
         if vidas == 3 {
             imgVida1.image = UIImage(named: "pokeball")
@@ -337,9 +336,9 @@ class JuegoViewController: UIViewController {
             imgVida3.image = UIImage(named: "pokeball_abierta")
         }
     }
-
+    
     func mostrarFinDelJuego() {
-        timerTotal?.invalidate()
+//        timerTotal?.invalidate()
         timerPregunta?.invalidate()
         let alerta = UIAlertController(title: "Juego Terminado", message: "¡Has perdido todas tus vidas!", preferredStyle: .alert)
         alerta.addAction(UIAlertAction(title: "Reiniciar", style: .default) { _ in
@@ -350,30 +349,41 @@ class JuegoViewController: UIViewController {
         })
         present(alerta, animated: true)
     }
-
+    
     func reiniciarJuego() {
         indicePreguntaActual = 0
         vidas = 3
         puntaje = 0 // Reiniciar puntaje
         lblPuntaje.text = "\(puntaje)" // Actualizar label
-        tiempoTotal = 0
-        timerTotal?.invalidate()
+//        tiempoTotal = 0
+//        timerTotal?.invalidate()
         timerPregunta?.invalidate()
-        iniciarTimerTotal()
+//        iniciarTimerTotal()
         actualizarVidasUI()
         mostrarPregunta()
     }
     
     func mostrarPuntajeFinal() {
-        timerTotal?.invalidate()
+//        timerTotal?.invalidate()
         timerPregunta?.invalidate()
-        let alerta = UIAlertController(title: "Trivia Terminada", message: "Has completado todas las preguntas.", preferredStyle: .alert)
-        alerta.addAction(UIAlertAction(title: "Regresar al inicio", style: .default) { _ in
-            self.navegarAPantallaDeInicio()
-        })
-        present(alerta, animated: true)
+        
+        if DatosPuntajes.sharedDatos().esNuevoRecord(puntaje: puntaje) {
+            mostrarAlertaParaNombre(puntaje: puntaje)
+        } else {
+            let alerta = UIAlertController(
+                title: "Trivia Terminada",
+                message: "Has completado todas las preguntas, obtuviste un puntaje de \(puntaje)",
+                preferredStyle: .alert
+            )
+            
+            alerta.addAction(UIAlertAction(title: "Regresar al inicio", style: .default) { _ in
+                self.navegarAPantallaDeInicio()
+            })
+            
+            present(alerta, animated: true)
+        }
     }
-
+    
     func navegarAPantallaDeInicio() {
         if let navigationController = self.navigationController {
             navigationController.popToRootViewController(animated: true)
@@ -384,6 +394,34 @@ class JuegoViewController: UIViewController {
     
     @IBAction func AcabarPartida(_ sender: Any)
     {
+        navegarAPantallaDeInicio()
+    }
+
+    func mostrarAlertaParaNombre(puntaje: Int) {
+        let alerta = UIAlertController(
+            title: "¡Has roto un nuevo récord con un puntaje de: \(puntaje)!",
+            message: "Ingresa tu nombre",
+            preferredStyle: .alert
+        )
+        
+        alerta.addTextField { textField in
+            textField.placeholder = "Nombre"
+        }
+        
+        let guardarAccion = UIAlertAction(title: "Guardar", style: .default) { _ in
+            guard let nombre = alerta.textFields?.first?.text, !nombre.isEmpty else {
+                self.mostrarAlertaParaNombre(puntaje: puntaje)
+                return
+            }
+            
+            DatosPuntajes.sharedDatos().agregarPuntaje(
+                jugador: nombre,
+                puntaje: puntaje
+            )
+        }
+        
+        alerta.addAction(guardarAccion)
+        present(alerta, animated: true)
         navegarAPantallaDeInicio()
     }
 }

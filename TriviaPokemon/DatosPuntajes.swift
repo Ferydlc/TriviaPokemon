@@ -25,7 +25,6 @@ class DatosPuntajes: NSObject {
         return datos
     }
     
-    // MARK: - Manejo del archivo .plist
     func abrirArchivo() {
         let ruta = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "/puntajes.plist"
         let urlArchivo = URL(fileURLWithPath: ruta)
@@ -34,17 +33,16 @@ class DatosPuntajes: NSObject {
             let archivo = try Data(contentsOf: urlArchivo)
             let objeto = try PropertyListSerialization.propertyList(from: archivo, format: nil)
             
-            // Manejar migración desde formato antiguo
             if let array = objeto as? [[String: Any]] {
                 self.puntajes = array
-            } else if let diccionarioAntiguo = objeto as? [String: Any] { // Formato antiguo (1 jugador)
+            } else if let diccionarioAntiguo = objeto as? [String: Any] {
                 let jugador = diccionarioAntiguo["jugador"] as? String ?? ""
                 let puntaje = diccionarioAntiguo["puntaje"] as? Int ?? 0
                 self.puntajes = [["jugador": jugador, "puntaje": puntaje]]
             }
             
-            print("✅ Archivo CARGADO desde: \(urlArchivo)")
-            print("📝 Contenido actual: \(self.puntajes)")
+            print("Archivo CARGADO desde: \(urlArchivo)")
+            print("Contenido actual: \(self.puntajes)")
             
         } catch {
             print("⚠️ El archivo no existe. Se inicia con datos vacíos. Error: \(error)")
@@ -63,28 +61,45 @@ class DatosPuntajes: NSObject {
                 options: 0
             )
             try archivo.write(to: urlArchivo)
-            print("💾 Archivo GUARDADO en: \(urlArchivo)")
+            print("Archivo GUARDADO en: \(urlArchivo)")
         } catch {
-            print("⛔️ Error al guardar: \(error)")
+            print("Error al guardar: \(error)")
         }
     }
     
-    // MARK: - Lógica para agregar y ordenar puntajes
     func agregarPuntaje(jugador: String, puntaje: Int) {
-        let nuevoPuntaje = ["jugador": jugador, "puntaje": puntaje] as [String : Any]
+        let nuevoPuntaje = ["jugador": jugador, "puntaje": puntaje] as [String: Any]
         
-        // 1. Agregar a la lista
-        self.puntajes.append(nuevoPuntaje)
-        
-        // 2. Ordenar DESC por puntaje
-        self.puntajes.sort { ($0["puntaje"] as! Int) > ($1["puntaje"] as! Int) }
-        
-        // 3. Limitar a 5 elementos
-        if self.puntajes.count > 5 {
-            self.puntajes = Array(self.puntajes[0..<5])
+        // Insertar en la posición correcta para mantener orden
+        var insertado = false
+        for (index, puntajeExistente) in puntajes.enumerated() {
+            if let puntajeActual = puntajeExistente["puntaje"] as? Int, puntaje > puntajeActual {
+                puntajes.insert(nuevoPuntaje, at: index)
+                insertado = true
+                break
+            }
         }
         
-        // 4. Guardar cambios
-        self.guardarArchivo()
+        if !insertado && puntajes.count < 5 {
+            puntajes.append(nuevoPuntaje)
+        }
+        
+        // Limitar a 5 elementos
+        if puntajes.count > 5 {
+            puntajes = Array(puntajes[0..<5])
+        }
+        
+        guardarArchivo()
+    }
+    
+    func esNuevoRecord(puntaje: Int) -> Bool {
+        if puntajes.count < 5 {
+            return true
+        } else {
+            guard let menorPuntaje = puntajes.last?["puntaje"] as? Int else {
+                return false
+            }
+            return puntaje > menorPuntaje
+        }
     }
 }

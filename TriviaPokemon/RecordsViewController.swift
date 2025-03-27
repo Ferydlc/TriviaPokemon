@@ -11,7 +11,7 @@ class RecordsViewController: UIViewController {
 
     @IBOutlet weak var scrRecordsJugadores: UIScrollView!
     
-    let imagenes = ["Areus","dialga","giratina","palkia","rayquaza"]
+    let imagenes = ["arceus","dialga","giratina","palkia","rayquaza"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
