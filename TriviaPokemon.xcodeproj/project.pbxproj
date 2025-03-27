@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02977F972D94ADFC00386658 /* LaunchImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02977F962D94ADFC00386658 /* LaunchImage.jpg */; };
+		02977F9B2D94B73600386658 /* pokecard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02977F9A2D94B73600386658 /* pokecard.jpg */; };
+		02977FA12D94BD7700386658 /* creditsback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02977F9E2D94BD7700386658 /* creditsback.jpg */; };
+		02977FA22D94BD7700386658 /* Back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02977F9C2D94BD7700386658 /* Back.jpg */; };
+		02977FA32D94BD7700386658 /* back2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02977F9D2D94BD7700386658 /* back2.jpg */; };
+		02977FA92D94C8D100386658 /* rayquaza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02977FA82D94C8D100386658 /* rayquaza.jpg */; };
+		02977FAA2D94C8D100386658 /* Arceus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02977FA42D94C8D100386658 /* Arceus.jpg */; };
+		02977FAB2D94C8D100386658 /* giratina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02977FA62D94C8D100386658 /* giratina.jpg */; };
+		02977FAC2D94C8D100386658 /* palkia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02977FA72D94C8D100386658 /* palkia.jpg */; };
+		02977FAD2D94C8D100386658 /* dialga.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02977FA52D94C8D100386658 /* dialga.jpg */; };
+		02977FC52D94C9CC00386658 /* records.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02977FC42D94C9CC00386658 /* records.jpg */; };
+		02977FC72D94CA1800386658 /* records2.png in Resources */ = {isa = PBXBuildFile; fileRef = 02977FC62D94CA1800386658 /* records2.png */; };
+		02977FC92D94CC6100386658 /* recordback.png in Resources */ = {isa = PBXBuildFile; fileRef = 02977FC82D94CC6100386658 /* recordback.png */; };
 		02BF639F2D933EA7004C40CE /* 38.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63852D933EA7004C40CE /* 38.jpg */; };
 		02BF63A02D933EA7004C40CE /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63682D933EA7004C40CE /* 9.jpg */; };
 		02BF63A12D933EA7004C40CE /* 50.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02BF63912D933EA7004C40CE /* 50.jpg */; };
@@ -78,6 +91,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02977F962D94ADFC00386658 /* LaunchImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchImage.jpg; sourceTree = "<group>"; };
+		02977F9A2D94B73600386658 /* pokecard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pokecard.jpg; sourceTree = "<group>"; };
+		02977F9C2D94BD7700386658 /* Back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Back.jpg; sourceTree = "<group>"; };
+		02977F9D2D94BD7700386658 /* back2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back2.jpg; sourceTree = "<group>"; };
+		02977F9E2D94BD7700386658 /* creditsback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creditsback.jpg; sourceTree = "<group>"; };
+		02977FA42D94C8D100386658 /* Arceus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Arceus.jpg; sourceTree = "<group>"; };
+		02977FA52D94C8D100386658 /* dialga.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dialga.jpg; sourceTree = "<group>"; };
+		02977FA62D94C8D100386658 /* giratina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = giratina.jpg; sourceTree = "<group>"; };
+		02977FA72D94C8D100386658 /* palkia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = palkia.jpg; sourceTree = "<group>"; };
+		02977FA82D94C8D100386658 /* rayquaza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rayquaza.jpg; sourceTree = "<group>"; };
+		02977FC42D94C9CC00386658 /* records.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = records.jpg; sourceTree = "<group>"; };
+		02977FC62D94CA1800386658 /* records2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = records2.png; sourceTree = "<group>"; };
+		02977FC82D94CC6100386658 /* recordback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recordback.png; sourceTree = "<group>"; };
 		02BF632F2D9308CF004C40CE /* TriviaPokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaPokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BF63622D933EA7004C40CE /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		02BF63632D933EA7004C40CE /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
@@ -204,6 +230,19 @@
 		02BF639E2D933EA7004C40CE /* TriviaFiles 2 */ = {
 			isa = PBXGroup;
 			children = (
+				02977FC82D94CC6100386658 /* recordback.png */,
+				02977FA42D94C8D100386658 /* Arceus.jpg */,
+				02977FA52D94C8D100386658 /* dialga.jpg */,
+				02977FA62D94C8D100386658 /* giratina.jpg */,
+				02977FC62D94CA1800386658 /* records2.png */,
+				02977FA72D94C8D100386658 /* palkia.jpg */,
+				02977FA82D94C8D100386658 /* rayquaza.jpg */,
+				02977FC42D94C9CC00386658 /* records.jpg */,
+				02977F9C2D94BD7700386658 /* Back.jpg */,
+				02977F9D2D94BD7700386658 /* back2.jpg */,
+				02977F9E2D94BD7700386658 /* creditsback.jpg */,
+				02977F9A2D94B73600386658 /* pokecard.jpg */,
+				02977F962D94ADFC00386658 /* LaunchImage.jpg */,
 				048DAB112D936B6E004D6DAF /* exito.mp3 */,
 				048DAB122D936B6E004D6DAF /* fracaso.mp3 */,
 				048DAB0D2D936669004D6DAF /* nosonido.png */,
@@ -367,11 +406,13 @@
 				02BF63AD2D933EA7004C40CE /* pokeball.png in Resources */,
 				02BF63AE2D933EA7004C40CE /* 3.jpg in Resources */,
 				02BF63AF2D933EA7004C40CE /* 23.jpg in Resources */,
+				02977FC92D94CC6100386658 /* recordback.png in Resources */,
 				02BF63B02D933EA7004C40CE /* 45.jpg in Resources */,
 				048DAB132D936B6E004D6DAF /* exito.mp3 in Resources */,
 				048DAB142D936B6E004D6DAF /* fracaso.mp3 in Resources */,
 				02BF63B12D933EA7004C40CE /* 48.jpg in Resources */,
 				02BF63B22D933EA7004C40CE /* 13.jpg in Resources */,
+				02977FC72D94CA1800386658 /* records2.png in Resources */,
 				02BF63B32D933EA7004C40CE /* 29.jpeg in Resources */,
 				02BF63B42D933EA7004C40CE /* 10.jpg in Resources */,
 				02BF63B52D933EA7004C40CE /* 42.jpg in Resources */,
@@ -380,13 +421,23 @@
 				02BF63B82D933EA7004C40CE /* 41.jpg in Resources */,
 				02BF63B92D933EA7004C40CE /* 16.jpg in Resources */,
 				02BF63BA2D933EA7004C40CE /* 4.jpg in Resources */,
+				02977FC52D94C9CC00386658 /* records.jpg in Resources */,
 				02BF63BB2D933EA7004C40CE /* 22.jpg in Resources */,
 				02BF63BC2D933EA7004C40CE /* Background.jpg in Resources */,
 				02BF63BD2D933EA7004C40CE /* 26.jpg in Resources */,
 				02BF63BE2D933EA7004C40CE /* Logo.png in Resources */,
 				02BF63BF2D933EA7004C40CE /* 19.jpg in Resources */,
+				02977FA12D94BD7700386658 /* creditsback.jpg in Resources */,
+				02977FA92D94C8D100386658 /* rayquaza.jpg in Resources */,
+				02977FAA2D94C8D100386658 /* Arceus.jpg in Resources */,
+				02977FAB2D94C8D100386658 /* giratina.jpg in Resources */,
+				02977FAC2D94C8D100386658 /* palkia.jpg in Resources */,
+				02977FAD2D94C8D100386658 /* dialga.jpg in Resources */,
+				02977FA22D94BD7700386658 /* Back.jpg in Resources */,
+				02977FA32D94BD7700386658 /* back2.jpg in Resources */,
 				02BF63C02D933EA7004C40CE /* 27.jpg in Resources */,
 				02BF63C12D933EA7004C40CE /* 43.jpg in Resources */,
+				02977F9B2D94B73600386658 /* pokecard.jpg in Resources */,
 				02BF63C22D933EA7004C40CE /* 12.jpg in Resources */,
 				02BF63C32D933EA7004C40CE /* 31.jpg in Resources */,
 				02BF63C42D933EA7004C40CE /* 25.jpg in Resources */,
@@ -410,6 +461,7 @@
 				02BF63D52D933EA7004C40CE /* 39.jpg in Resources */,
 				02BF63D62D933EA7004C40CE /* BackgroundCreditos.jpeg in Resources */,
 				02BF63D72D933EA7004C40CE /* 14.jpg in Resources */,
+				02977F972D94ADFC00386658 /* LaunchImage.jpg in Resources */,
 				02BF63D82D933EA7004C40CE /* 17.jpg in Resources */,
 				02BF63D92D933EA7004C40CE /* 44.jpg in Resources */,
 				02BF63DA2D933EA7004C40CE /* 47.jpg in Resources */,

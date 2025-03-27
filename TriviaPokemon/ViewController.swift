@@ -12,11 +12,22 @@ class ViewController: UIViewController {
     var audioPlayer: AVAudioPlayer?
     var isPlaying = true
     
+    @IBOutlet var btnPantallaInicio: [UIButton]!
     @IBOutlet weak var musicButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        for boton in btnPantallaInicio
+       {
+          boton.layer.cornerRadius = 10
+       }
+        
+        musicButton.layer.cornerRadius = 30
     }
     
     func setupAudio() {
@@ -30,6 +41,7 @@ class ViewController: UIViewController {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer?.numberOfLoops = -1 // Repetir indefinidamente
             audioPlayer?.play()
+            audioPlayer?.volume = 0.05
             updateButtonImage()
         } catch {
             print("Error al cargar el audio: \(error.localizedDescription)")

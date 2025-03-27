@@ -16,7 +16,6 @@ class SplashViewController: UIViewController {
        super.viewDidLoad()
        imvSplash.frame.size.width = 0.0
        imvSplash.frame.size.height = 0.0
-        DatosPuntajes.sharedDatos( ).abrirArchivo( )
     }
     
     override func viewDidAppear(_ animated: Bool)

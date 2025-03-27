@@ -9,67 +9,82 @@ import UIKit
 
 class DatosPuntajes: NSObject {
     
-    var jugador: String
-    var puntaje: Int
+    // Cambiar a un arreglo de diccionarios para múltiples jugadores
+    var puntajes: [[String: Any]] = []
     static var datos: DatosPuntajes!
     
     override init() {
-        self.jugador = ""
-        self.puntaje = 0
+        super.init()
     }
     
     static func sharedDatos() -> DatosPuntajes {
-         if datos == nil {
-             datos = DatosPuntajes.init( )
+        if datos == nil {
+            datos = DatosPuntajes()
+            datos.abrirArchivo()
         }
         return datos
     }
     
-    //Abre el archivo persistente plist
-    func abrirArchivo()
-    {
-        let ruta =
-        NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "/puntajes.plist"
-                
+    // MARK: - Manejo del archivo .plist
+    func abrirArchivo() {
+        let ruta = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "/puntajes.plist"
         let urlArchivo = URL(fileURLWithPath: ruta)
         
-        do
-        {
-            let archivo = try Data.init(contentsOf: urlArchivo)
+        do {
+            let archivo = try Data(contentsOf: urlArchivo)
+            let objeto = try PropertyListSerialization.propertyList(from: archivo, format: nil)
             
-            let diccionario = try PropertyListSerialization.propertyList(from: archivo, format:nil) as! [String:Any]
+            // Manejar migración desde formato antiguo
+            if let array = objeto as? [[String: Any]] {
+                self.puntajes = array
+            } else if let diccionarioAntiguo = objeto as? [String: Any] { // Formato antiguo (1 jugador)
+                let jugador = diccionarioAntiguo["jugador"] as? String ?? ""
+                let puntaje = diccionarioAntiguo["puntaje"] as? Int ?? 0
+                self.puntajes = [["jugador": jugador, "puntaje": puntaje]]
+            }
             
-            jugador = diccionario["jugador"] as! String
-            puntaje = diccionario["puntaje"] as! Int
+            print("✅ Archivo CARGADO desde: \(urlArchivo)")
+            print("📝 Contenido actual: \(self.puntajes)")
             
-            print(urlArchivo)
-            print(diccionario)
-        }
-        catch
-        {
-            print("El archivo no existe ")
+        } catch {
+            print("⚠️ El archivo no existe. Se inicia con datos vacíos. Error: \(error)")
+            self.puntajes = []
         }
     }
-
-    //Guarda archivo persistente plist
-    func guardarArchivo()
-    {
-        let ruta =
-        NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "/puntajes.plist"
-        
+    
+    func guardarArchivo() {
+        let ruta = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "/puntajes.plist"
         let urlArchivo = URL(fileURLWithPath: ruta)
         
-        let diccionario : [String : Any] = ["jugador": self.jugador, "puntaje": self.puntaje]
-        
-        do
-        {
-            let archivo = try PropertyListSerialization.data(fromPropertyList: diccionario,format: .xml, options: NSPropertyListWriteStreamError)
-            
+        do {
+            let archivo = try PropertyListSerialization.data(
+                fromPropertyList: self.puntajes,
+                format: .xml,
+                options: 0
+            )
             try archivo.write(to: urlArchivo)
+            print("💾 Archivo GUARDADO en: \(urlArchivo)")
+        } catch {
+            print("⛔️ Error al guardar: \(error)")
         }
-        catch
-        {
-            print("algo salio mal :(")
+    }
+    
+    // MARK: - Lógica para agregar y ordenar puntajes
+    func agregarPuntaje(jugador: String, puntaje: Int) {
+        let nuevoPuntaje = ["jugador": jugador, "puntaje": puntaje] as [String : Any]
+        
+        // 1. Agregar a la lista
+        self.puntajes.append(nuevoPuntaje)
+        
+        // 2. Ordenar DESC por puntaje
+        self.puntajes.sort { ($0["puntaje"] as! Int) > ($1["puntaje"] as! Int) }
+        
+        // 3. Limitar a 5 elementos
+        if self.puntajes.count > 5 {
+            self.puntajes = Array(self.puntajes[0..<5])
         }
+        
+        // 4. Guardar cambios
+        self.guardarArchivo()
     }
 }
