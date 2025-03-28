@@ -11,7 +11,7 @@ class RecordsViewController: UIViewController {
 
     @IBOutlet weak var scrRecordsJugadores: UIScrollView!
     
-    let imagenes = ["arceus","dialga","giratina","palkia","rayquaza"]
+    let imagenes = ["arceus.jpg","dialga.jpg","giratina.jpg","palkia.jpg","rayquaza.jpg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class RecordsViewController: UIViewController {
     
     func dibujarRecords() {
         let datos = DatosPuntajes.sharedDatos()
-        let puntajes = datos.puntajes // Acceder al arreglo de diccionarios
+        let puntajes = datos.puntajes
         
         let w = scrRecordsJugadores.frame.width * 0.9
         let h = 100.0
@@ -30,28 +30,29 @@ class RecordsViewController: UIViewController {
         let x = (scrRecordsJugadores.frame.width - w)/2.0
         var y = k
         
-        // Limpiar scroll view
         for vista in scrRecordsJugadores.subviews {
             vista.removeFromSuperview()
         }
         
-        // Iterar sobre los puntajes (máximo 5)
         for i in 0..<puntajes.count {
             let jugador = puntajes[i]["jugador"] as? String ?? "Anónimo"
             let puntaje = puntajes[i]["puntaje"] as? Int ?? 0
             
             let vwJugador = UIView(frame: CGRect(x: x, y: y, width: w, height: h))
-            vwJugador.backgroundColor = .systemTeal
+            vwJugador.backgroundColor = nil
             vwJugador.layer.cornerRadius = 12
             
-            // Configurar imagen
+            let backgroundImage = UIImageView(frame: CGRect(x: 0, y: 0, width: w, height: h))
+            backgroundImage.image = UIImage(named: "TextBox.png")
+            backgroundImage.contentMode = .scaleToFill
+            vwJugador.addSubview(backgroundImage)
+            
             let imvPokemon = UIImageView(frame: CGRect(x: 5, y: 5, width: 90, height: 90))
-            imvPokemon.image = UIImage(named: imagenes[i % imagenes.count]) // Ciclo de imágenes
+            imvPokemon.image = UIImage(named: imagenes[i])
             vwJugador.addSubview(imvPokemon)
             
-            // Configurar labels
-            let lblNombre = UILabel(frame: CGRect(x: 100, y: 5, width: vwJugador.frame.width - 105, height: 30))
-            lblNombre.text = "\(i+1). \(jugador)" // Número de posición
+            let lblNombre = UILabel(frame: CGRect(x: 100, y: 15, width: vwJugador.frame.width - 105, height: 30))
+            lblNombre.text = "\(i+1). \(jugador)"
             lblNombre.font = .boldSystemFont(ofSize: 22)
             vwJugador.addSubview(lblNombre)
             

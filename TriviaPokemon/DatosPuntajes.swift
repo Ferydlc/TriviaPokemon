@@ -9,7 +9,6 @@ import UIKit
 
 class DatosPuntajes: NSObject {
     
-    // Cambiar a un arreglo de diccionarios para múltiples jugadores
     var puntajes: [[String: Any]] = []
     static var datos: DatosPuntajes!
     
@@ -45,8 +44,19 @@ class DatosPuntajes: NSObject {
             print("Contenido actual: \(self.puntajes)")
             
         } catch {
-            print("⚠️ El archivo no existe. Se inicia con datos vacíos. Error: \(error)")
-            self.puntajes = []
+            print("El archivo no existe. Error: \(error)")
+            
+            let jugadoresFalsos = [
+                        ["jugador": "Dani", "puntaje": 1000],
+                        ["jugador": "Fer", "puntaje": 900],
+                        ["jugador": "Oswi", "puntaje": 800],
+                        ["jugador": "Omar", "puntaje": 700],
+                        ["jugador": "Tommy", "puntaje": 600]
+                    ]
+                    
+            self.puntajes = jugadoresFalsos
+                    
+            guardarArchivo()
         }
     }
     

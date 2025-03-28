@@ -29,7 +29,6 @@ class JuegoViewController: UIViewController {
         "41.jpg", "42.jpg", "43.jpg", "44.jpg", "45.jpg", "46.jpg", "47.jpg", "48.jpg", "49.jpg", "50.jpg"
     ];
     
-    // Array de preguntas
     let preguntas = [
         "¿Cuál es el Pokémon número 25 en la Pokédex Nacional?",
         "¿De qué tipo es Charmander?",
@@ -83,7 +82,6 @@ class JuegoViewController: UIViewController {
         "¿Cuál de estos Pokémon puede evolucionar a Froslass?"
     ]
     
-    // Array de respuestas
     let opciones = [
         ["a) Bulbasaur", "b) Charmander", "c) Pikachu", "d) Squirtle"],
         ["a) Agua", "b) Planta", "c) Eléctrico", "d) Fuego"],
@@ -192,18 +190,15 @@ class JuegoViewController: UIViewController {
     
     var indicePreguntaActual = 0
     var vidas = 3
-//    var tiempoTotal = 0
     var tiempoPregunta = 15
-//    var timerTotal: Timer?
     var timerPregunta: Timer?
     var puntaje = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        iniciarTimerTotal()
         mostrarPregunta()
         iniciarTimerPregunta()
-        lblPuntaje.text = "\(puntaje)" // Asegurar que empiece en 0
+        lblPuntaje.text = "\(puntaje)"
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -218,14 +213,7 @@ class JuegoViewController: UIViewController {
         
         btnTerminarPartida.layer.cornerRadius = 10
     }
-    
-//    func iniciarTimerTotal() {
-//        tiempoTotal = 0
-//        timerTotal = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-//            self.tiempoTotal += 1
-//        }
-//    }
-    
+        
     func iniciarTimerPregunta() {
         tiempoPregunta = 15
         lblTiempo.text = "15"
@@ -338,7 +326,6 @@ class JuegoViewController: UIViewController {
     }
     
     func mostrarFinDelJuego() {
-//        timerTotal?.invalidate()
         timerPregunta?.invalidate()
         let alerta = UIAlertController(title: "Juego Terminado", message: "¡Has perdido todas tus vidas!", preferredStyle: .alert)
         alerta.addAction(UIAlertAction(title: "Reiniciar", style: .default) { _ in
@@ -353,18 +340,14 @@ class JuegoViewController: UIViewController {
     func reiniciarJuego() {
         indicePreguntaActual = 0
         vidas = 3
-        puntaje = 0 // Reiniciar puntaje
-        lblPuntaje.text = "\(puntaje)" // Actualizar label
-//        tiempoTotal = 0
-//        timerTotal?.invalidate()
+        puntaje = 0
+        lblPuntaje.text = "\(puntaje)"
         timerPregunta?.invalidate()
-//        iniciarTimerTotal()
         actualizarVidasUI()
         mostrarPregunta()
     }
     
     func mostrarPuntajeFinal() {
-//        timerTotal?.invalidate()
         timerPregunta?.invalidate()
         
         if DatosPuntajes.sharedDatos().esNuevoRecord(puntaje: puntaje) {
@@ -418,10 +401,11 @@ class JuegoViewController: UIViewController {
                 jugador: nombre,
                 puntaje: puntaje
             )
+            
+            self.navegarAPantallaDeInicio()
         }
         
         alerta.addAction(guardarAccion)
         present(alerta, animated: true)
-        navegarAPantallaDeInicio()
     }
 }
